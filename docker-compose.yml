@@ -1,0 +1,8 @@
+version: "2.2"
+
+services:
+  crawler:
+    build: .
+    volumes:
+      - ./db:/app/db
+      - ./output:/app/output
