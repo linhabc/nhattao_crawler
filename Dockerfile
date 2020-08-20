@@ -9,7 +9,7 @@ COPY . .
 
 RUN go build main.go data_type.go util.go db.go
 
-RUN echo "Asia/Ho_Chi_Minh" > /etc/timezone
+RUN echo "UTC+7" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
 
 
