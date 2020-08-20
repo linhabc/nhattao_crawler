@@ -1,177 +1,176 @@
 {
   "total": 52,
   "categories": [
-    { "title": "iPhone", "viewurl": "https://nhattao.com/f/iphone.219/" },
     {
-      "title": "Máy tính Chrome OS",
-      "viewurl": "https://nhattao.com/f/may-tinh-chrome-os.582/"
-    },
-    {
-      "title": "Điện thoại phổ thông",
+      "title": "dien_thoai_pho_thong",
       "viewurl": "https://nhattao.com/f/dien-thoai-pho-thong.572/"
     },
     {
-      "title": "Smartphone khác",
-      "viewurl": "https://nhattao.com/f/smartphone-khac.570/"
-    },
-    {
-      "title": "Linh kiện phụ kiện",
+      "title": "linh_kien_phu_kien_dien_thoai",
       "viewurl": "https://nhattao.com/f/linh-kien-phu-kien.547/"
     },
     {
-      "title": "BlackBerry",
+      "title": "blackberry",
       "viewurl": "https://nhattao.com/f/blackberry.218/"
     },
     {
-      "title": "Điện thoại Android",
+      "title": "dien_thoai_android",
       "viewurl": "https://nhattao.com/f/dien-thoai-android.544/"
     },
+    { "title": "iphone", "viewurl": "https://nhattao.com/f/iphone.219/" },
     {
-      "title": "Windows Phone",
+      "title": "windows_phone",
       "viewurl": "https://nhattao.com/f/windows-phone.545/"
     },
     {
-      "title": "Máy tính bảng khác",
+      "title": "smartphone_khac",
+      "viewurl": "https://nhattao.com/f/smartphone-khac.570/"
+    },
+    {
+      "title": "may_tinh_bang_khac",
       "viewurl": "https://nhattao.com/f/may-tinh-bang-khac.551/"
     },
     {
-      "title": "Linh kiện phụ kiện",
+      "title": "linh_kien_phu_kien_may_tinh_bang",
       "viewurl": "https://nhattao.com/f/linh-kien-phu-kien.552/"
     },
-    { "title": "iPad", "viewurl": "https://nhattao.com/f/ipad.569/" },
+    { "title": "ipad", "viewurl": "https://nhattao.com/f/ipad.569/" },
     {
-      "title": "Máy tính bảng Android",
+      "title": "may_tinh_bang_android",
       "viewurl": "https://nhattao.com/f/may-tinh-bang-android.549/"
     },
     {
-      "title": "Máy tính bảng Windows",
+      "title": "may_tinh_bang_windows",
       "viewurl": "https://nhattao.com/f/may-tinh-bang-windows.550/"
     },
-
     {
-      "title": "Server | Workstation",
-      "viewurl": "https://nhattao.com/f/server-workstation.554/"
-    },
-    {
-      "title": "Linh kiện phụ kiện",
-      "viewurl": "https://nhattao.com/f/linh-kien-phu-kien.555/"
-    },
-    {
-      "title": "Màn hình máy vi tính",
-      "viewurl": "https://nhattao.com/f/man-hinh-may-vi-tinh.641/"
-    },
-    {
-      "title": "Máy tính Windows",
+      "title": "may_tinh_windows",
       "viewurl": "https://nhattao.com/f/may-tinh-windows.145/"
     },
     {
-      "title": "Máy tính Apple",
+      "title": "may_tinh_apple",
       "viewurl": "https://nhattao.com/f/may-tinh-apple.483/"
     },
     {
-      "title": "Đồng hồ thông minh",
+      "title": "may_tinh_chrome_os",
+      "viewurl": "https://nhattao.com/f/may-tinh-chrome-os.582/"
+    },
+    {
+      "title": "server_workstation",
+      "viewurl": "https://nhattao.com/f/server-workstation.554/"
+    },
+    {
+      "title": "linh_kien_u0026_phu_kien",
+      "viewurl": "https://nhattao.com/f/linh-kien-phu-kien.555/"
+    },
+    {
+      "title": "man_hinh_may_vi_tinh",
+      "viewurl": "https://nhattao.com/f/man-hinh-may-vi-tinh.641/"
+    },
+    {
+      "title": "dong_ho_thong_minh",
       "viewurl": "https://nhattao.com/f/dong-ho-thong-minh.585/"
     },
     {
-      "title": "Đồng hồ điện tử",
+      "title": "dong_ho_dien_tu",
       "viewurl": "https://nhattao.com/f/dong-ho-dien-tu.747/"
     },
     {
-      "title": "Đồng hồ thời trang",
+      "title": "dong_ho_thoi_trang",
       "viewurl": "https://nhattao.com/f/dong-ho-thoi-trang.748/"
     },
     {
-      "title": "Phụ kiện đồng hồ",
+      "title": "phu_kien_dong_ho",
       "viewurl": "https://nhattao.com/f/phu-kien-dong-ho.753/"
     },
     {
-      "title": "Máy quay phim",
-      "viewurl": "https://nhattao.com/f/may-quay-phim.559/"
-    },
-    { "title": "Ống kính", "viewurl": "https://nhattao.com/f/ong-kinh.560/" },
-    {
-      "title": "Phụ kiện Camera",
-      "viewurl": "https://nhattao.com/f/phu-kien-camera.561/"
-    },
-    { "title": "Flycam", "viewurl": "https://nhattao.com/f/flycam.731/" },
-    {
-      "title": "Máy ảnh DSLR",
+      "title": "may_anh_dslr",
       "viewurl": "https://nhattao.com/f/may-anh-dslr.571/"
     },
     {
-      "title": "Máy ảnh Compact",
+      "title": "may_anh_compact",
       "viewurl": "https://nhattao.com/f/may-anh-compact.557/"
     },
     {
-      "title": "Máy ảnh Mirrorless",
+      "title": "may_anh_mirrorless",
       "viewurl": "https://nhattao.com/f/may-anh-mirrorless.558/"
     },
-    { "title": "Gia dụng", "viewurl": "https://nhattao.com/f/gia-dung.669/" },
     {
-      "title": "Thiết bị văn phòng",
-      "viewurl": "https://nhattao.com/f/thiet-bi-van-phong.695/"
+      "title": "may_quay_phim",
+      "viewurl": "https://nhattao.com/f/may-quay-phim.559/"
     },
+    { "title": "ong_kinh", "viewurl": "https://nhattao.com/f/ong-kinh.560/" },
     {
-      "title": "Máy móc công nghiệp",
+      "title": "phu_kien_camera",
+      "viewurl": "https://nhattao.com/f/phu-kien-camera.561/"
+    },
+    { "title": "flycam", "viewurl": "https://nhattao.com/f/flycam.731/" },
+    { "title": "nghe_nhin", "viewurl": "https://nhattao.com/f/nghe-nhin.647/" },
+    {
+      "title": "may_moc_cong_nghiep",
       "viewurl": "https://nhattao.com/f/may-moc-cong-nghiep.759/"
     },
-    { "title": "Nghe nhìn", "viewurl": "https://nhattao.com/f/nghe-nhin.647/" },
-    { "title": "Điện lạnh", "viewurl": "https://nhattao.com/f/dien-lanh.654/" },
-    { "title": "Nhà bếp", "viewurl": "https://nhattao.com/f/nha-bep.660/" },
     {
-      "title": "Sức khoẻ | Làm đẹp",
-      "viewurl": "https://nhattao.com/f/suc-khoe-lam-dep.675/"
-    },
-    {
-      "title": "An ninh | An toàn",
+      "title": "an_ninh_an_toan",
       "viewurl": "https://nhattao.com/f/an-ninh-an-toan.683/"
     },
-    { "title": "Điện cơ", "viewurl": "https://nhattao.com/f/dien-co.687/" },
+    { "title": "dien_co", "viewurl": "https://nhattao.com/f/dien-co.687/" },
     {
-      "title": "Phụ tùng ô tô",
-      "viewurl": "https://nhattao.com/f/phu-tung-o-to.721/"
+      "title": "thiet_bi_van_phong",
+      "viewurl": "https://nhattao.com/f/thiet-bi-van-phong.695/"
     },
-    { "title": "Xe máy", "viewurl": "https://nhattao.com/f/xe-may.704/" },
+    { "title": "dien_lanh", "viewurl": "https://nhattao.com/f/dien-lanh.654/" },
+    { "title": "nha_bep", "viewurl": "https://nhattao.com/f/nha-bep.660/" },
+    { "title": "gia_dung", "viewurl": "https://nhattao.com/f/gia-dung.669/" },
     {
-      "title": "Phụ tùng xe máy",
-      "viewurl": "https://nhattao.com/f/phu-tung-xe-may.717/"
+      "title": "suc_khoe_lam_dep",
+      "viewurl": "https://nhattao.com/f/suc-khoe-lam-dep.675/"
     },
+    { "title": "o_to", "viewurl": "https://nhattao.com/f/o-to.708/" },
+    { "title": "xe_dap", "viewurl": "https://nhattao.com/f/xe-dap.538/" },
     {
-      "title": "Xe đạp/Xe máy điện",
+      "title": "xe_dap/xe_may_dien",
       "viewurl": "https://nhattao.com/f/xe-dap-xe-may-dien.714/"
     },
     {
-      "title": "Xe cân bằng",
+      "title": "xe_can_bang",
       "viewurl": "https://nhattao.com/f/xe-can-bang.715/"
     },
     {
-      "title": "Phụ tùng xe đạp",
+      "title": "phu_tung_xe_may",
+      "viewurl": "https://nhattao.com/f/phu-tung-xe-may.717/"
+    },
+    {
+      "title": "phu_tung_xe_dap",
       "viewurl": "https://nhattao.com/f/phu-tung-xe-dap.584/"
     },
     {
-      "title": "Phụ tùng xe đạp điện",
+      "title": "phu_tung_xe_dap_dien",
       "viewurl": "https://nhattao.com/f/phu-tung-xe-dap-dien.716/"
     },
-    { "title": "Ô tô", "viewurl": "https://nhattao.com/f/o-to.708/" },
-    { "title": "Xe đạp", "viewurl": "https://nhattao.com/f/xe-dap.538/" },
+    { "title": "xe_may", "viewurl": "https://nhattao.com/f/xe-may.704/" },
     {
-      "title": "Sim số đẹp",
-      "viewurl": "https://nhattao.com/f/sim-so-dep.214/"
+      "title": "phu_tung_o_to",
+      "viewurl": "https://nhattao.com/f/phu-tung-o-to.721/"
     },
     {
-      "title": "Sim dữ liệu (3G/4G)",
+      "title": "sim_du_lieu_3g/4g_",
       "viewurl": "https://nhattao.com/f/sim-du-lieu-3g-4g.542/"
     },
     {
-      "title": "Mắt kính thông minh",
+      "title": "sim_so_dep",
+      "viewurl": "https://nhattao.com/f/sim-so-dep.214/"
+    },
+    {
+      "title": "mat_kinh_thong_minh",
       "viewurl": "https://nhattao.com/f/mat-kinh-thong-minh.750/"
     },
     {
-      "title": "Mắt kính cận thị / viễn thị",
+      "title": "mat_kinh_can_thi_/_vien_thi",
       "viewurl": "https://nhattao.com/f/mat-kinh-can-thi-vien-thi.751/"
     },
     {
-      "title": "Mắt kính thời trang",
+      "title": "mat_kinh_thoi_trang",
       "viewurl": "https://nhattao.com/f/mat-kinh-thoi-trang.752/"
     }
   ]

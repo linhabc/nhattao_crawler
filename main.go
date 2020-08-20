@@ -62,7 +62,7 @@ func worker(jobs <-chan Category, wg *sync.WaitGroup) {
 
 func crawlFromCategory(category Category, f *os.File) {
 	// open leveldb connection
-	db := createOrOpenDb("./db/" + category.URL)
+	db := createOrOpenDb("./db/" + category.Title)
 	defer db.Close()
 
 	users := NewUsers()
