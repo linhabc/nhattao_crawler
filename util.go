@@ -83,7 +83,7 @@ func (users *Users) getUserInformation(url string, category string, f *os.File, 
 	}
 
 	currentTime := time.Now()
-	time := currentTime.Format("09-07-2017")
+	time := currentTime.Format("01/02/2006")
 	userName := res.Find(".threadview-header--seller a span").Text()
 	title := res.Find("h2.threadview-header--title").Text()
 	price := res.Find(".threadview-header--classifiedPrice").Text()
@@ -97,7 +97,7 @@ func (users *Users) getUserInformation(url string, category string, f *os.File, 
 	location = strings.TrimSpace(location)
 	price = strings.TrimSpace(price)
 
-	time = strings.Replace(time, "+", "-", 1)
+	time = strings.Replace(time, "/", "-", 2)
 
 	if len(phoneNum) == 0 {
 		println("phone num = 0 " + url)
