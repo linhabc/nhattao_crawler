@@ -9,8 +9,7 @@ COPY . .
 
 RUN go build main.go data_type.go util.go db.go
 
-RUN echo "Asia/Ho_Chi_Minh" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
-
+ENV TZ=Asia/Ho_Chi_Minh
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 CMD [ "./main" ]

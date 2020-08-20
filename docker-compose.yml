@@ -6,3 +6,6 @@ services:
     volumes:
       - ./db:/app/db
       - ./output:/app/output
+
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
