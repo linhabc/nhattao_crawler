@@ -8,7 +8,7 @@ sudo docker run --name=crawler_go --mount source=output,destination=/app/output 
 
 sudo docker run -d -it --name crawler_go --mount type=bind,source=/home/linhnguyen/app_target/db,target=/app/db --mount type=bind,source=/home/linhnguyen/app_target/output,target=/app/output linhabc/nhattao_crawler
 
-sudo docker run -d -it --name crawler_go --mount type=bind,source=/u01/data/nhattao.net/db,target=/app/db --mount type=bind,source=/u01/data/nhattao.net/output,target=/app/output linhabc/nhattao_crawler.....
+sudo docker run -d -it --name nhattao_crawler --mount type=bind,source=/u01/data/nhattao.com/db,target=/app/db --mount type=bind,source=/u01/data/nhattao.com/output,target=/app/output linhabc/nhattao_crawler
 
 # Using docker-compose
 
