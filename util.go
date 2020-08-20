@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"os"
 	"strings"
-	"sync"
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
@@ -15,42 +14,34 @@ import (
 )
 
 func getHTMLPage(url string) *goquery.Document {
-
-	req, err := http.NewRequest("GET", url, nil)
-	if err != nil {
-		return nil
-	}
-
-	req.Host = "nhattao.com"
-	req.Header = map[string][]string{
-		"User-Agent": {"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0"},
-		// "Accept-Encoding": {"gzip, deflate"},
-
-		// "Accept-Language": {"vi-VN", "vi", "q=0.8,en-US", "q=0.5,en", "q=0.3"},
-		"Cookie": {"nhattao_session=05b69b4f16ec28215ef29598a9996f60; xf_vim|mudim-settings=26; G_ENABLED_IDPS=google; _cfduid=d087a49f7192613603e541a3d0337f0e91597744875; ga=GA1.2.1555371478.1597744810; gid=GA1.2.1217142350.1597744810; gat=1; _gads=ID=50fb02670837f4f0-22570feffec200ec:T=1597744877:S=ALNI_MYu6AUNqV62AHSYzaErs_rUmWkDxQ; fbp=fb.1.1597744810408.1159376184"},
-
-		"Referer": {"https://nhattao.com/"},
-	}
-	client := &http.Client{}
-
 	// Request the HTML page.
 	// res, err := http.Get(url)
 
-	res, err := client.Do(req)
+	res, err := http.Get(url)
+
 	if err != nil {
 		println("ERROR GET")
 		return nil
 	}
 	defer res.Body.Close()
+
+	if res.StatusCode == 429 {
+		for {
+			time.Sleep(1 * time.Second)
+			res, err = http.Get(url)
+			if res.StatusCode == 200 {
+				break
+			}
+		}
+	}
+
 	if res.StatusCode != 200 {
 		print("ERORR RES STATUS: ")
-		println(res.StatusCode)
 		return nil
 	}
 
 	// Load the HTML document
 	doc, err := goquery.NewDocumentFromReader(res.Body)
-
 	if err != nil {
 		return nil
 	}
@@ -58,7 +49,7 @@ func getHTMLPage(url string) *goquery.Document {
 }
 
 func (users *Users) getNexURL(doc *goquery.Document) string {
-	aLink := doc.Find("a.text")
+	aLink := doc.Find("a.text:last-child")
 	nextPageLink, _ := aLink.Attr("href")
 
 	// Trường hợp không có url
@@ -72,25 +63,20 @@ func (users *Users) getNexURL(doc *goquery.Document) string {
 	print("NEXTPAGE: ")
 	println(nextPageLink)
 
-	time.Sleep(5 * time.Second)
+	time.Sleep(1 * time.Second)
 	return nextPageLink
 }
 
 func (users *Users) getAllUserInformation(doc *goquery.Document, category string, f *os.File, db *leveldb.DB) {
-	var wg sync.WaitGroup
 	doc.Find(".Nhattao-CardItem--inner a.title").Each(func(i int, s *goquery.Selection) {
 		userLink, _ := s.Attr("href")
-		wg.Add(1)
 		userLink = rootLink + userLink
-		go users.getUserInformation(userLink, category, &wg, f, db)
+		users.getUserInformation(userLink, category, f, db)
 	})
-	wg.Wait()
 }
 
-func (users *Users) getUserInformation(url string, category string, wg *sync.WaitGroup, f *os.File, db *leveldb.DB) {
-	defer wg.Done()
+func (users *Users) getUserInformation(url string, category string, f *os.File, db *leveldb.DB) {
 
-	time.Sleep(5 * time.Second)
 	res := getHTMLPage(url)
 	if res == nil {
 		return
@@ -110,6 +96,8 @@ func (users *Users) getUserInformation(url string, category string, wg *sync.Wai
 	time = strings.TrimSpace(time)
 	location = strings.TrimSpace(location)
 	price = strings.TrimSpace(price)
+
+	time = strings.Replace(time, "+", "-", 1)
 
 	if len(phoneNum) == 0 {
 		println("phone num = 0 " + url)

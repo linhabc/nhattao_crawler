@@ -10,6 +10,8 @@ import (
 )
 
 func main() {
+	os.Setenv("HTTP_PROXY", "10.4.200.197:8089")
+
 	// get categories from json file
 	file, _ := ioutil.ReadFile("categories.json")
 
@@ -25,17 +27,15 @@ func crawlAllFromCategories(categories Categories) {
 
 	jobs := make(chan Category, 100)
 
-	for w := 1; w <= 3; w++ {
-		wg.Add(1)
-		go worker(w, jobs, &wg)
-	}
+	wg.Add(1)
+	go worker(jobs, &wg)
 
 	// schedule to run program each 3 hour
 	for true {
 		for i := 0; i < len(categories.List); i++ {
 			jobs <- categories.List[i]
 		}
-		time.Sleep(2 * time.Hour)
+		time.Sleep(5 * time.Hour)
 	}
 
 	close(jobs)
@@ -43,7 +43,7 @@ func crawlAllFromCategories(categories Categories) {
 	wg.Wait()
 }
 
-func worker(id int, jobs <-chan Category, wg *sync.WaitGroup) {
+func worker(jobs <-chan Category, wg *sync.WaitGroup) {
 	defer wg.Done()
 
 	// create output directory
@@ -55,8 +55,7 @@ func worker(id int, jobs <-chan Category, wg *sync.WaitGroup) {
 		// open or create file
 		dt := time.Now()
 		f, _ := os.OpenFile("./output/"+j.Title+"___"+dt.Format("20060102150405")+".json", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
-		fmt.Println("worker: ", id, "processing job: ", j)
-
+		fmt.Println("processing job: ", j)
 		crawlFromCategory(j, f)
 	}
 }

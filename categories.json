@@ -1,13 +1,18 @@
 {
   "total": 52,
   "categories": [
+    { "title": "iPhone", "viewurl": "https://nhattao.com/f/iphone.219/" },
     {
-      "title": "Smartphone khác",
-      "viewurl": "https://nhattao.com/f/smartphone-khac.570/"
+      "title": "Máy tính Chrome OS",
+      "viewurl": "https://nhattao.com/f/may-tinh-chrome-os.582/"
     },
     {
       "title": "Điện thoại phổ thông",
       "viewurl": "https://nhattao.com/f/dien-thoai-pho-thong.572/"
+    },
+    {
+      "title": "Smartphone khác",
+      "viewurl": "https://nhattao.com/f/smartphone-khac.570/"
     },
     {
       "title": "Linh kiện phụ kiện",
@@ -21,7 +26,6 @@
       "title": "Điện thoại Android",
       "viewurl": "https://nhattao.com/f/dien-thoai-android.544/"
     },
-    { "title": "iPhone", "viewurl": "https://nhattao.com/f/iphone.219/" },
     {
       "title": "Windows Phone",
       "viewurl": "https://nhattao.com/f/windows-phone.545/"
@@ -43,10 +47,7 @@
       "title": "Máy tính bảng Windows",
       "viewurl": "https://nhattao.com/f/may-tinh-bang-windows.550/"
     },
-    {
-      "title": "Máy tính Chrome OS",
-      "viewurl": "https://nhattao.com/f/may-tinh-chrome-os.582/"
-    },
+
     {
       "title": "Server | Workstation",
       "viewurl": "https://nhattao.com/f/server-workstation.554/"
