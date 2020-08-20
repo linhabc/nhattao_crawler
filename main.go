@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	os.Setenv("HTTP_PROXY", "10.4.200.197:8089")
+	// os.Setenv("HTTP_PROXY", "10.4.200.197:8089")
 
 	// get categories from json file
 	file, _ := ioutil.ReadFile("categories.json")
