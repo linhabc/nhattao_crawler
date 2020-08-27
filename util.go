@@ -90,12 +90,19 @@ func (users *Users) getUserInformation(url string, category string, f *os.File, 
 	location := res.Find("dd span.address").Text()
 	phoneNum := res.Find("#nhattao2019-contactPhone").Text()
 
+	// itemType := res.Find("fieldset.breadcumb:first-child").Find("span.crust:last-child").Find("a.crumb span").Text()
+
+	itemType := res.Find("span[itemprop]").Last().Text()
+
+	println("itemType: " + itemType)
+
 	userName = strings.TrimSpace(userName)
 	phoneNum = strings.TrimSpace(phoneNum)
 	title = strings.TrimSpace(title)
 	time = strings.TrimSpace(time)
 	location = strings.TrimSpace(location)
 	price = strings.TrimSpace(price)
+	itemType = strings.TrimSpace(itemType)
 
 	time = strings.Replace(time, "/", "-", 2)
 
@@ -112,6 +119,7 @@ func (users *Users) getUserInformation(url string, category string, f *os.File, 
 
 	// check if id is exist in db or not
 	checkExist := getData(db, id)
+
 	if len(checkExist) != 0 {
 		println("Exist: " + id)
 		return
@@ -126,6 +134,7 @@ func (users *Users) getUserInformation(url string, category string, f *os.File, 
 		Time:        time,
 		Location:    location,
 		Price:       price,
+		Type:        itemType,
 	}
 
 	_ = putData(db, id, phoneNum)
